@@ -146,8 +146,13 @@
                 </div>
             </div>
 
-            <!-- Export Options -->
-            <div class="export-section d-flex justify-content-end mb-3">
+            <!-- Payment and Export Options -->
+            <div class="action-section d-flex justify-content-between mb-3">
+                <div>
+                    <button class="btn btn-primary" id="make-payment-btn">
+                        <i class="fas fa-plus mr-1"></i> Make Payment
+                    </button>
+                </div>
                 <div class="dropdown">
                     <button class="btn btn-secondary">
                         <i class="fas fa-download mr-1"></i> Export
@@ -155,6 +160,136 @@
                     <div class="dropdown-menu">
                         <a href="#" class="dropdown-item">Export as CSV</a>
                         <a href="#" class="dropdown-item">Export as PDF</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Payment Options Section (Initially Hidden) -->
+            <div class="payment-options-section card mb-4">
+                <div class="card-header">
+                    <h3>Make a Payment</h3>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="payment-amount" class="form-label">Amount</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                            <input type="number" id="payment-amount" class="form-input" placeholder="Enter amount">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Payment Method</label>
+                        <div class="payment-methods">
+                            <div class="payment-method-options">
+                                <div class="payment-method-option">
+                                    <input type="radio" id="mpesa" name="payment-method" value="mpesa">
+                                    <label for="mpesa" class="payment-method-label">
+                                        <img src="../images/mpesa-logo.png" alt="M-Pesa" class="payment-logo">
+                                        <span>M-Pesa</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-method-option">
+                                    <input type="radio" id="paystack" name="payment-method" value="paystack">
+                                    <label for="paystack" class="payment-method-label">
+                                        <img src="../images/paystack-logo.png" alt="PayStack" class="payment-logo">
+                                        <span>PayStack</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-method-option">
+                                    <input type="radio" id="credit-card" name="payment-method" value="credit-card">
+                                    <label for="credit-card" class="payment-method-label">
+                                        <i class="fas fa-credit-card fa-2x"></i>
+                                        <span>Credit Card</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-method-option">
+                                    <input type="radio" id="insurance" name="payment-method" value="insurance">
+                                    <label for="insurance" class="payment-method-label">
+                                        <i class="fas fa-file-medical fa-2x"></i>
+                                        <span>Insurance</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Payment Method Forms -->
+                            <div class="payment-method-forms mt-3">
+                                <!-- M-Pesa Form -->
+                                <div class="payment-form mpesa-form">
+                                    <div class="form-group">
+                                        <label for="mpesa-phone" class="form-label">Phone Number</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-phone"></i>
+                                            <input type="tel" id="mpesa-phone" class="form-input" placeholder="Enter M-Pesa phone number">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-block">Pay with M-Pesa</button>
+                                </div>
+                                
+                                <!-- PayStack Form -->
+                                <div class="payment-form paystack-form">
+                                    <div class="form-group">
+                                        <label for="paystack-email" class="form-label">Email</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-envelope"></i>
+                                            <input type="email" id="paystack-email" class="form-input" placeholder="Enter your email">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-block">Pay with PayStack</button>
+                                </div>
+                                
+                                <!-- Credit Card Form -->
+                                <div class="payment-form credit-card-form">
+                                    <div class="form-group">
+                                        <label for="card-number" class="form-label">Card Number</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-credit-card"></i>
+                                            <input type="text" id="card-number" class="form-input" placeholder="Enter card number">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-6">
+                                            <label for="card-expiry" class="form-label">Expiry Date</label>
+                                            <input type="text" id="card-expiry" class="form-input" placeholder="MM/YY">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="card-cvv" class="form-label">CVV</label>
+                                            <input type="text" id="card-cvv" class="form-input" placeholder="CVV">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="card-name" class="form-label">Cardholder Name</label>
+                                        <input type="text" id="card-name" class="form-input" placeholder="Name on card">
+                                    </div>
+                                    <button class="btn btn-primary btn-block">Pay with Card</button>
+                                </div>
+                                
+                                <!-- Insurance Form -->
+                                <div class="payment-form insurance-form">
+                                    <div class="form-group">
+                                        <label for="insurance-provider" class="form-label">Insurance Provider</label>
+                                        <select id="insurance-provider" class="form-input">
+                                            <option value="">Select Provider</option>
+                                            <option value="nhif">NHIF</option>
+                                            <option value="jubilee">Jubilee Insurance</option>
+                                            <option value="britam">Britam</option>
+                                            <option value="aaa">AAA Insurance</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="policy-number" class="form-label">Policy Number</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-id-card"></i>
+                                            <input type="text" id="policy-number" class="form-input" placeholder="Enter policy number">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-block">Submit Insurance Claim</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
