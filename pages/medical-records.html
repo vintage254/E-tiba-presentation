@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Tiba Healthcare App - Medical Records</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="navbar-logo">e-Tiba</div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="profile.html" class="navbar-link">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="../index.html" class="navbar-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <img src="../images/user-avatar.png" alt="User Avatar" class="user-avatar rounded-circle">
+                    <div class="user-details">
+                        <h4>John Doe</h4>
+                        <p>Patient</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="dashboard.html" class="sidebar-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="appointments.html" class="sidebar-link">
+                        <i class="fas fa-calendar-alt"></i> Appointments
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="consultations.html" class="sidebar-link">
+                        <i class="fas fa-video"></i> Consultations
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="medical-records.html" class="sidebar-link active">
+                        <i class="fas fa-file-medical"></i> Medical Records
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="medications.html" class="sidebar-link">
+                        <i class="fas fa-pills"></i> Medications
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="transactions.html" class="sidebar-link">
+                        <i class="fas fa-credit-card"></i> Transactions
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="profile.html" class="sidebar-link">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="settings.html" class="sidebar-link">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Medical Records Content -->
+        <main class="main-content">
+            <div class="dashboard-header">
+                <h1>Medical Records</h1>
+                <p>Access and manage your health information</p>
+            </div>
+
+            <!-- Medical Records Actions -->
+            <div class="action-buttons mb-4">
+                <button class="btn btn-primary">
+                    <i class="fas fa-upload"></i> Upload Records
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-filter"></i> Filter
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-download"></i> Export
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-share-alt"></i> Share
+                </button>
+            </div>
+
+            <!-- Medical Records Categories -->
+            <div class="records-categories mb-4">
+                <div class="row">
+                    <div class="col">
+                        <div class="card category-card text-center">
+                            <i class="fas fa-file-medical-alt fa-2x text-primary"></i>
+                            <h3>Diagnoses</h3>
+                            <p>12 records</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card category-card text-center">
+                            <i class="fas fa-flask fa-2x text-primary"></i>
+                            <h3>Lab Results</h3>
+                            <p>8 records</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card category-card text-center">
+                            <i class="fas fa-x-ray fa-2x text-primary"></i>
+                            <h3>Imaging</h3>
+                            <p>5 records</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card category-card text-center">
+                            <i class="fas fa-heartbeat fa-2x text-primary"></i>
+                            <h3>Vitals</h3>
+                            <p>24 records</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Medical Records -->
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="section-title">Recent Records</h2>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search records..." class="form-input">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Type</th>
+                                    <th>Provider</th>
+                                    <th>Description</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mar 5, 2025</td>
+                                    <td>Lab Results</td>
+                                    <td>Nairobi Medical Lab</td>
+                                    <td>Complete Blood Count (CBC)</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm btn-secondary"><i class="fas fa-download"></i></button>
+                                        <button class="btn btn-sm btn-secondary"><i class="fas fa-share-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 28, 2025</td>
+                                    <td>Consultation</td>
+                                    <td>Dr. Sarah Johnson</td>
+                                    <td>Cardiology Follow-up</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm btn-secondary"><i class="fas fa-download"></i></button>
+                                        <button class="btn btn-sm btn-secondary"><i class="fas fa-share-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 20, 2025</td>
+                                    <td>Imaging</td>
+                                    <td>Nairobi Imaging Center</td>
+                                    <td>Chest X-Ray</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm btn-secondary"><i class="fas fa-download"></i></button>
+                                        <button class="btn btn-sm btn-secondary"><i class="fas fa-share-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 15, 2025</td>
+                                    <td>Prescription</td>
+                                    <td>Dr. Michael Chen</td>
+                                    <td>Antibiotics for Respiratory Infection</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm btn-secondary"><i class="fas fa-download"></i></button>
+                                        <button class="btn btn-sm btn-secondary"><i class="fas fa-share-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 10, 2025</td>
+                                    <td>Vitals</td>
+                                    <td>e-Tiba Home Monitoring</td>
+                                    <td>Weekly Health Check</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-sm btn-secondary"><i class="fas fa-download"></i></button>
+                                        <button class="btn btn-sm btn-secondary"><i class="fas fa-share-alt"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination">
+                        <button class="btn btn-sm btn-secondary"><i class="fas fa-chevron-left"></i></button>
+                        <button class="btn btn-sm btn-primary">1</button>
+                        <button class="btn btn-sm btn-secondary">2</button>
+                        <button class="btn btn-sm btn-secondary">3</button>
+                        <button class="btn btn-sm btn-secondary"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health Trends -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="section-title">Health Trends</h2>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <!-- Charts would be implemented with JavaScript -->
+                        <div class="chart-placeholder text-center p-5">
+                            <i class="fas fa-chart-line fa-4x text-muted mb-3"></i>
+                            <p>Health trends charts would be implemented with JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

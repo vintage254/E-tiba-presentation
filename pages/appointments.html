@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Tiba Healthcare App - Appointments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="navbar-logo">e-Tiba</div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="profile.html" class="navbar-link">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="../index.html" class="navbar-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <img src="../images/user-avatar.png" alt="User Avatar" class="user-avatar rounded-circle">
+                    <div class="user-details">
+                        <h4>John Doe</h4>
+                        <p>Patient</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="dashboard.html" class="sidebar-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="appointments.html" class="sidebar-link active">
+                        <i class="fas fa-calendar-alt"></i> Appointments
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="consultations.html" class="sidebar-link">
+                        <i class="fas fa-video"></i> Consultations
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="medical-records.html" class="sidebar-link">
+                        <i class="fas fa-file-medical"></i> Medical Records
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="medications.html" class="sidebar-link">
+                        <i class="fas fa-pills"></i> Medications
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="transactions.html" class="sidebar-link">
+                        <i class="fas fa-credit-card"></i> Transactions
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="profile.html" class="sidebar-link">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="settings.html" class="sidebar-link">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Appointments Content -->
+        <main class="main-content">
+            <div class="dashboard-header">
+                <h1>Appointments</h1>
+                <p>Manage your healthcare appointments</p>
+            </div>
+
+            <!-- Appointment Actions -->
+            <div class="action-buttons mb-4">
+                <button class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Book New Appointment
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-filter"></i> Filter
+                </button>
+            </div>
+
+            <!-- Appointment Calendar -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="section-title">Calendar</h2>
+                </div>
+                <div class="card-body">
+                    <div class="calendar-header d-flex justify-content-between align-items-center">
+                        <button class="btn btn-secondary"><i class="fas fa-chevron-left"></i></button>
+                        <h3>March 2025</h3>
+                        <button class="btn btn-secondary"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-grid">
+                        <!-- Calendar would be implemented with JavaScript -->
+                        <div class="calendar-placeholder text-center p-5">
+                            <i class="fas fa-calendar-alt fa-4x text-muted mb-3"></i>
+                            <p>Calendar view would be implemented with JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Appointments -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="section-title">Upcoming Appointments</h2>
+                </div>
+                <div class="card-body">
+                    <div class="appointment-item d-flex justify-content-between align-items-center">
+                        <div class="appointment-info">
+                            <h3>Dr. Sarah Johnson</h3>
+                            <p>Cardiologist</p>
+                            <p><i class="fas fa-calendar-alt"></i> Monday, March 10, 2025</p>
+                            <p><i class="fas fa-clock"></i> 10:00 AM - 10:30 AM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Nairobi Medical Center, Room 305</p>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="btn btn-primary">Join</button>
+                            <button class="btn btn-secondary">Reschedule</button>
+                            <button class="btn btn-danger">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="appointment-item d-flex justify-content-between align-items-center">
+                        <div class="appointment-info">
+                            <h3>Dr. Michael Chen</h3>
+                            <p>General Practitioner</p>
+                            <p><i class="fas fa-calendar-alt"></i> Thursday, March 13, 2025</p>
+                            <p><i class="fas fa-clock"></i> 2:00 PM - 2:30 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Virtual Consultation</p>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="btn btn-primary">Join</button>
+                            <button class="btn btn-secondary">Reschedule</button>
+                            <button class="btn btn-danger">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Appointments -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="section-title">Past Appointments</h2>
+                </div>
+                <div class="card-body">
+                    <div class="appointment-item d-flex justify-content-between align-items-center">
+                        <div class="appointment-info">
+                            <h3>Dr. James Wilson</h3>
+                            <p>Neurologist</p>
+                            <p><i class="fas fa-calendar-alt"></i> Monday, February 24, 2025</p>
+                            <p><i class="fas fa-clock"></i> 11:00 AM - 11:30 AM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Nairobi Medical Center, Room 210</p>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="btn btn-secondary">View Summary</button>
+                            <button class="btn btn-primary">Book Follow-up</button>
+                        </div>
+                    </div>
+                    <div class="appointment-item d-flex justify-content-between align-items-center">
+                        <div class="appointment-info">
+                            <h3>Dr. Emily Nguyen</h3>
+                            <p>Dermatologist</p>
+                            <p><i class="fas fa-calendar-alt"></i> Friday, February 14, 2025</p>
+                            <p><i class="fas fa-clock"></i> 3:30 PM - 4:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Virtual Consultation</p>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="btn btn-secondary">View Summary</button>
+                            <button class="btn btn-primary">Book Follow-up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
