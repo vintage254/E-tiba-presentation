@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Tiba Healthcare App - Transactions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="transactions-page">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="navbar-logo">e-Tiba</div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="profile.html" class="navbar-link">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="../index.html" class="navbar-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <img src="../images/user-avatar.png" alt="User Avatar" class="user-avatar rounded-circle">
+                    <div class="user-details">
+                        <h4>John Doe</h4>
+                        <p>Patient</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="dashboard.html" class="sidebar-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="appointments.html" class="sidebar-link">
+                        <i class="fas fa-calendar-alt"></i> Appointments
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="consultations.html" class="sidebar-link">
+                        <i class="fas fa-video"></i> Consultations
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="medical-records.html" class="sidebar-link">
+                        <i class="fas fa-file-medical"></i> Medical Records
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="medications.html" class="sidebar-link">
+                        <i class="fas fa-pills"></i> Medications
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="transactions.html" class="sidebar-link active">
+                        <i class="fas fa-credit-card"></i> Transactions
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="profile.html" class="sidebar-link">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="settings.html" class="sidebar-link">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Transactions Content -->
+        <main class="main-content">
+            <div class="transactions-header">
+                <h1>Transactions</h1>
+                <p>View and manage your payment history</p>
+            </div>
+
+            <!-- Filter Options -->
+            <div class="filter-section card mb-4">
+                <div class="filter-header">
+                    <h3>Filter Transactions</h3>
+                </div>
+                <div class="filter-body d-flex flex-wrap">
+                    <div class="filter-group mr-3">
+                        <label for="date-range" class="form-label">Date Range</label>
+                        <select id="date-range" class="form-input">
+                            <option value="all">All Time</option>
+                            <option value="today">Today</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                            <option value="year">This Year</option>
+                            <option value="custom">Custom Range</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group mr-3">
+                        <label for="status" class="form-label">Status</label>
+                        <select id="status" class="form-input">
+                            <option value="all">All Status</option>
+                            <option value="paid">Paid</option>
+                            <option value="pending">Pending</option>
+                            <option value="failed">Failed</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group mr-3">
+                        <label for="category" class="form-label">Category</label>
+                        <select id="category" class="form-input">
+                            <option value="all">All Categories</option>
+                            <option value="consultation">Consultation</option>
+                            <option value="medication">Medication</option>
+                            <option value="lab">Lab Tests</option>
+                            <option value="subscription">Subscription</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-actions align-self-end ml-auto">
+                        <button class="btn btn-primary">Apply Filters</button>
+                        <button class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Export Options -->
+            <div class="export-section d-flex justify-content-end mb-3">
+                <div class="dropdown">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-download mr-1"></i> Export
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Export as CSV</a>
+                        <a href="#" class="dropdown-item">Export as PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transactions List -->
+            <div class="transactions-list card">
+                <table class="transaction-table w-100">
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Payment Method</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#TRX-2025-001</td>
+                            <td>Mar 5, 2025</td>
+                            <td>Consultation - Dr. Sarah Johnson</td>
+                            <td>$45.00</td>
+                            <td>Credit Card</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-download"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#TRX-2025-002</td>
+                            <td>Mar 2, 2025</td>
+                            <td>Medication - Prescription #2345</td>
+                            <td>$28.50</td>
+                            <td>M-Pesa</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-download"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#TRX-2025-003</td>
+                            <td>Feb 28, 2025</td>
+                            <td>Lab Test - Blood Work</td>
+                            <td>$75.00</td>
+                            <td>Credit Card</td>
+                            <td><span class="badge badge-warning">Pending</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-download"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#TRX-2025-004</td>
+                            <td>Feb 25, 2025</td>
+                            <td>Monthly Subscription</td>
+                            <td>$19.99</td>
+                            <td>PayPal</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-download"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#TRX-2025-005</td>
+                            <td>Feb 20, 2025</td>
+                            <td>Consultation - Dr. Michael Chen</td>
+                            <td>$35.00</td>
+                            <td>Credit Card</td>
+                            <td><span class="badge badge-danger">Failed</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-sm btn-accent"><i class="fas fa-redo"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#TRX-2025-006</td>
+                            <td>Feb 15, 2025</td>
+                            <td>Medication - Prescription #2301</td>
+                            <td>$42.75</td>
+                            <td>M-Pesa</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-download"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-- Pagination -->
+                <div class="pagination-section d-flex justify-content-between align-items-center p-3">
+                    <div class="showing-entries">
+                        Showing 1 to 6 of 24 entries
+                    </div>
+                    <div class="pagination">
+                        <button class="btn btn-sm btn-secondary disabled">Previous</button>
+                        <button class="btn btn-sm btn-primary">1</button>
+                        <button class="btn btn-sm btn-secondary">2</button>
+                        <button class="btn btn-sm btn-secondary">3</button>
+                        <button class="btn btn-sm btn-secondary">4</button>
+                        <button class="btn btn-sm btn-secondary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

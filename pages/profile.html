@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Tiba Healthcare App - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="profile-page">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="navbar-logo">e-Tiba</div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="profile.html" class="navbar-link">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="../index.html" class="navbar-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <img src="../images/user-avatar.png" alt="User Avatar" class="user-avatar rounded-circle">
+                    <div class="user-details">
+                        <h4>John Doe</h4>
+                        <p>Patient</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="dashboard.html" class="sidebar-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="appointments.html" class="sidebar-link">
+                        <i class="fas fa-calendar-alt"></i> Appointments
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="consultations.html" class="sidebar-link">
+                        <i class="fas fa-video"></i> Consultations
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="medical-records.html" class="sidebar-link">
+                        <i class="fas fa-file-medical"></i> Medical Records
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="medications.html" class="sidebar-link">
+                        <i class="fas fa-pills"></i> Medications
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="transactions.html" class="sidebar-link">
+                        <i class="fas fa-credit-card"></i> Transactions
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="profile.html" class="sidebar-link active">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="settings.html" class="sidebar-link">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Profile Content -->
+        <main class="main-content">
+            <div class="profile-header">
+                <h1>My Profile</h1>
+                <p>Manage your personal information</p>
+            </div>
+
+            <!-- Profile Information -->
+            <div class="profile-section card mb-4">
+                <div class="profile-info-header d-flex justify-content-between align-items-center">
+                    <h2>Personal Information</h2>
+                    <button class="btn btn-primary edit-profile-btn">
+                        <i class="fas fa-edit mr-1"></i> Edit Profile
+                    </button>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="profile-picture-container text-center">
+                                <div class="profile-picture">
+                                    <img src="../images/user-avatar.png" alt="User Profile" class="rounded-circle">
+                                    <div class="profile-picture-overlay">
+                                        <i class="fas fa-camera"></i>
+                                        <span>Change Photo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <div class="profile-details">
+                                <div class="profile-field">
+                                    <label>Full Name</label>
+                                    <p>John Doe</p>
+                                </div>
+                                
+                                <div class="profile-field">
+                                    <label>Email Address</label>
+                                    <p>johndoe@example.com</p>
+                                </div>
+                                
+                                <div class="profile-field">
+                                    <label>Phone Number</label>
+                                    <p>+254 712 345 678</p>
+                                </div>
+                                
+                                <div class="profile-field">
+                                    <label>Date of Birth</label>
+                                    <p>January 15, 1985</p>
+                                </div>
+                                
+                                <div class="profile-field">
+                                    <label>Gender</label>
+                                    <p>Male</p>
+                                </div>
+                                
+                                <div class="profile-field">
+                                    <label>Blood Type</label>
+                                    <p>O+</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medical Information -->
+            <div class="profile-section card mb-4">
+                <div class="profile-info-header d-flex justify-content-between align-items-center">
+                    <h2>Medical Information</h2>
+                    <button class="btn btn-primary edit-medical-btn">
+                        <i class="fas fa-edit mr-1"></i> Edit
+                    </button>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="profile-field">
+                                <label>Allergies</label>
+                                <p>Penicillin, Peanuts</p>
+                            </div>
+                            
+                            <div class="profile-field">
+                                <label>Chronic Conditions</label>
+                                <p>Hypertension</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="profile-field">
+                                <label>Current Medications</label>
+                                <p>Lisinopril 10mg (Daily)</p>
+                            </div>
+                            
+                            <div class="profile-field">
+                                <label>Family Medical History</label>
+                                <p>Diabetes, Heart Disease</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Contacts -->
+            <div class="profile-section card mb-4">
+                <div class="profile-info-header d-flex justify-content-between align-items-center">
+                    <h2>Emergency Contacts</h2>
+                    <button class="btn btn-primary add-contact-btn">
+                        <i class="fas fa-plus mr-1"></i> Add Contact
+                    </button>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="emergency-contact-item d-flex justify-content-between align-items-center">
+                        <div class="contact-info">
+                            <h3>Jane Doe</h3>
+                            <p>Relationship: Spouse</p>
+                            <p><i class="fas fa-phone"></i> +254 723 456 789</p>
+                            <p><i class="fas fa-envelope"></i> janedoe@example.com</p>
+                        </div>
+                        <div class="contact-actions">
+                            <button class="btn btn-secondary"><i class="fas fa-edit"></i></button>
+                            <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="emergency-contact-item d-flex justify-content-between align-items-center">
+                        <div class="contact-info">
+                            <h3>Michael Doe</h3>
+                            <p>Relationship: Son</p>
+                            <p><i class="fas fa-phone"></i> +254 734 567 890</p>
+                            <p><i class="fas fa-envelope"></i> michael@example.com</p>
+                        </div>
+                        <div class="contact-actions">
+                            <button class="btn btn-secondary"><i class="fas fa-edit"></i></button>
+                            <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Settings -->
+            <div class="profile-section card">
+                <div class="profile-info-header">
+                    <h2>Security</h2>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="security-options">
+                        <div class="security-option d-flex justify-content-between align-items-center">
+                            <div>
+                                <h3>Change Password</h3>
+                                <p>Update your account password</p>
+                            </div>
+                            <button class="btn btn-secondary">Change Password</button>
+                        </div>
+                        
+                        <div class="security-option d-flex justify-content-between align-items-center">
+                            <div>
+                                <h3>Two-Factor Authentication</h3>
+                                <p>Add an extra layer of security to your account</p>
+                            </div>
+                            <button class="btn btn-primary">Enable</button>
+                        </div>
+                        
+                        <div class="security-option d-flex justify-content-between align-items-center">
+                            <div>
+                                <h3>Login History</h3>
+                                <p>View your recent login activity</p>
+                            </div>
+                            <button class="btn btn-secondary">View History</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

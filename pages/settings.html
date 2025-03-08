@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Tiba Healthcare App - Settings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="settings-page">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="navbar-logo">e-Tiba</div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="profile.html" class="navbar-link">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="../index.html" class="navbar-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <img src="../images/user-avatar.png" alt="User Avatar" class="user-avatar rounded-circle">
+                    <div class="user-details">
+                        <h4>John Doe</h4>
+                        <p>Patient</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="dashboard.html" class="sidebar-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="appointments.html" class="sidebar-link">
+                        <i class="fas fa-calendar-alt"></i> Appointments
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="consultations.html" class="sidebar-link">
+                        <i class="fas fa-video"></i> Consultations
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="medical-records.html" class="sidebar-link">
+                        <i class="fas fa-file-medical"></i> Medical Records
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="medications.html" class="sidebar-link">
+                        <i class="fas fa-pills"></i> Medications
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="transactions.html" class="sidebar-link">
+                        <i class="fas fa-credit-card"></i> Transactions
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="profile.html" class="sidebar-link">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="settings.html" class="sidebar-link active">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Settings Content -->
+        <main class="main-content">
+            <div class="settings-header">
+                <h1>Settings</h1>
+                <p>Customize your app experience</p>
+            </div>
+
+            <!-- Settings Sections -->
+            <div class="settings-container">
+                <!-- Appearance Settings -->
+                <div class="settings-section card mb-4">
+                    <div class="settings-section-header">
+                        <h2><i class="fas fa-palette mr-2"></i> Appearance</h2>
+                    </div>
+                    <div class="settings-section-content">
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Theme</h3>
+                                <p>Choose between light and dark mode</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="theme-toggle" class="toggle-input">
+                                    <label for="theme-toggle" class="toggle-label"></label>
+                                    <span class="toggle-text">Light</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Text Size</h3>
+                                <p>Adjust the size of text throughout the app</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="text-size-options">
+                                    <button class="btn btn-sm btn-secondary">A-</button>
+                                    <button class="btn btn-sm btn-primary">A</button>
+                                    <button class="btn btn-sm btn-secondary">A+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Color Blind Mode</h3>
+                                <p>Optimize colors for different types of color blindness</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="colorblind-toggle" class="toggle-input">
+                                    <label for="colorblind-toggle" class="toggle-label"></label>
+                                    <span class="toggle-text">Off</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Notification Settings -->
+                <div class="settings-section card mb-4">
+                    <div class="settings-section-header">
+                        <h2><i class="fas fa-bell mr-2"></i> Notifications</h2>
+                    </div>
+                    <div class="settings-section-content">
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Appointment Reminders</h3>
+                                <p>Get notified about upcoming appointments</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="appointment-toggle" class="toggle-input" checked>
+                                    <label for="appointment-toggle" class="toggle-label"></label>
+                                    <span class="toggle-text">On</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Medication Reminders</h3>
+                                <p>Get notified when it's time to take your medication</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="medication-toggle" class="toggle-input" checked>
+                                    <label for="medication-toggle" class="toggle-label"></label>
+                                    <span class="toggle-text">On</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Payment Notifications</h3>
+                                <p>Get notified about payment confirmations and receipts</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="payment-toggle" class="toggle-input" checked>
+                                    <label for="payment-toggle" class="toggle-label"></label>
+                                    <span class="toggle-text">On</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Health Tips</h3>
+                                <p>Receive personalized health tips and recommendations</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="tips-toggle" class="toggle-input">
+                                    <label for="tips-toggle" class="toggle-label"></label>
+                                    <span class="toggle-text">Off</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Language & Region Settings -->
+                <div class="settings-section card mb-4">
+                    <div class="settings-section-header">
+                        <h2><i class="fas fa-globe mr-2"></i> Language & Region</h2>
+                    </div>
+                    <div class="settings-section-content">
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Language</h3>
+                                <p>Select your preferred language</p>
+                            </div>
+                            <div class="setting-control">
+                                <select class="form-input">
+                                    <option value="en">English</option>
+                                    <option value="sw">Swahili</option>
+                                    <option value="kik">Kikuyu</option>
+                                    <option value="luo">Luo</option>
+                                    <option value="kam">Kamba</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Region</h3>
+                                <p>Select your region for localized content</p>
+                            </div>
+                            <div class="setting-control">
+                                <select class="form-input">
+                                    <option value="nairobi">Nairobi</option>
+                                    <option value="mombasa">Mombasa</option>
+                                    <option value="kisumu">Kisumu</option>
+                                    <option value="nakuru">Nakuru</option>
+                                    <option value="eldoret">Eldoret</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Date Format</h3>
+                                <p>Choose how dates are displayed</p>
+                            </div>
+                            <div class="setting-control">
+                                <select class="form-input">
+                                    <option value="mdy">MM/DD/YYYY</option>
+                                    <option value="dmy">DD/MM/YYYY</option>
+                                    <option value="ymd">YYYY/MM/DD</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Privacy & Security Settings -->
+                <div class="settings-section card mb-4">
+                    <div class="settings-section-header">
+                        <h2><i class="fas fa-shield-alt mr-2"></i> Privacy & Security</h2>
+                    </div>
+                    <div class="settings-section-content">
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Two-Factor Authentication</h3>
+                                <p>Add an extra layer of security to your account</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="2fa-toggle" class="toggle-input">
+                                    <label for="2fa-toggle" class="toggle-label"></label>
+                                    <span class="toggle-text">Off</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Biometric Login</h3>
+                                <p>Use fingerprint or face recognition to log in</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="biometric-toggle" class="toggle-input" checked>
+                                    <label for="biometric-toggle" class="toggle-label"></label>
+                                    <span class="toggle-text">On</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Data Sharing</h3>
+                                <p>Control how your health data is shared with providers</p>
+                            </div>
+                            <div class="setting-control">
+                                <button class="btn btn-secondary">Manage Permissions</button>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Change Password</h3>
+                                <p>Update your account password</p>
+                            </div>
+                            <div class="setting-control">
+                                <button class="btn btn-secondary">Change</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Data & Storage Settings -->
+                <div class="settings-section card mb-4">
+                    <div class="settings-section-header">
+                        <h2><i class="fas fa-database mr-2"></i> Data & Storage</h2>
+                    </div>
+                    <div class="settings-section-content">
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Offline Mode</h3>
+                                <p>Access important information when offline</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="offline-toggle" class="toggle-input" checked>
+                                    <label for="offline-toggle" class="toggle-label"></label>
+                                    <span class="toggle-text">On</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Download Medical Records</h3>
+                                <p>Download a copy of your medical records</p>
+                            </div>
+                            <div class="setting-control">
+                                <button class="btn btn-secondary">Download</button>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Clear Cache</h3>
+                                <p>Free up storage space by clearing cached data</p>
+                            </div>
+                            <div class="setting-control">
+                                <button class="btn btn-secondary">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Help & Support -->
+                <div class="settings-section card">
+                    <div class="settings-section-header">
+                        <h2><i class="fas fa-question-circle mr-2"></i> Help & Support</h2>
+                    </div>
+                    <div class="settings-section-content">
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Contact Support</h3>
+                                <p>Get help with any issues or questions</p>
+                            </div>
+                            <div class="setting-control">
+                                <button class="btn btn-secondary">Contact</button>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>FAQs</h3>
+                                <p>Find answers to common questions</p>
+                            </div>
+                            <div class="setting-control">
+                                <button class="btn btn-secondary">View</button>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>Terms & Privacy Policy</h3>
+                                <p>Read our terms of service and privacy policy</p>
+                            </div>
+                            <div class="setting-control">
+                                <button class="btn btn-secondary">View</button>
+                            </div>
+                        </div>
+                        
+                        <div class="setting-item d-flex justify-content-between align-items-center">
+                            <div class="setting-info">
+                                <h3>About e-Tiba</h3>
+                                <p>Learn more about our app and mission</p>
+                            </div>
+                            <div class="setting-control">
+                                <button class="btn btn-secondary">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
